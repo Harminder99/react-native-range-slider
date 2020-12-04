@@ -64,6 +64,9 @@ static const CGFloat kLabelsFontSize = 12.0f;
     _hideLabels = NO;
     
     _handleDiameter = 16.0;
+    
+    _labelRotation = 0;
+    
     _selectedHandleDiameterMultiplier = 1.7;
     
     _lineHeight = 1.0;
@@ -311,9 +314,14 @@ static const CGFloat kLabelsFontSize = 12.0f;
     CGSize minLabelTextSize = self.minLabelTextSize;
     CGSize maxLabelTextSize = self.maxLabelTextSize;
     
+    CGFloat minWidth = _labelRotation == 0 ? minLabelTextSize.width : minLabelTextSize.height;
+    CGFloat minHeight = _labelRotation == 0 ? minLabelTextSize.height : minLabelTextSize.width;
     
-    self.minLabel.frame = CGRectMake(0, 0, minLabelTextSize.width, minLabelTextSize.height);
-    self.maxLabel.frame = CGRectMake(0, 0, maxLabelTextSize.width, maxLabelTextSize.height);
+    CGFloat maxWidth = _labelRotation == 0 ? maxLabelTextSize.width : maxLabelTextSize.height;
+    CGFloat maxHeight = _labelRotation == 0 ? maxLabelTextSize.height : maxLabelTextSize.width;
+    
+    self.minLabel.frame = CGRectMake(0, 0, minWidth, minHeight);
+    self.maxLabel.frame = CGRectMake(0, 0, maxWidth, maxHeight);
 
     float newLeftMostXInMaxLabel = newMaxLabelCenter.x - maxLabelTextSize.width/2;
     float newRightMostXInMinLabel = newMinLabelCenter.x + minLabelTextSize.width/2;
@@ -689,6 +697,7 @@ static const CGFloat kLabelsFontSize = 12.0f;
 }
 
 -(void)setLabelRotation:(CGFloat)radians{
+    _labelRotation = radians;
     self.minLabel.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0);
     self.maxLabel.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0);
 }

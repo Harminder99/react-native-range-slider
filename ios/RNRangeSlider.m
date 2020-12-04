@@ -160,7 +160,7 @@
 - (void) setHandleDiameter:(float)handleDiameter{
     [_rangeSlider setHandleDiameter:handleDiameter];
 }
--(void)setLabelRotation:(CGFloat)radians{
+-(void)setLabelRotation:(float)radians{
     [_rangeSlider setLabelRotation:radians];
 }
 - (void)setDisableRange:(BOOL)disableRange{
