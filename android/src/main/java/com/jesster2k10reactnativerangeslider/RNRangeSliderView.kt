@@ -34,8 +34,8 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
   var hideLabels: Boolean? = false
     set(value) {
       field = value
-      minTextView?.visibility = View.GONE
-      maxTextView?.visibility = View.GONE
+      minTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
+      maxTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
     }
 
   init {
