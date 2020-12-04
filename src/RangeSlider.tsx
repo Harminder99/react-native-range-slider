@@ -38,11 +38,8 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
   leftHandlePressedColor,
   rightHandlePressedColor,
   handlePressedColor,
-  minStartValue,
-  maxStartValue,
   fixGap,
   style = {},
-  cornerRadius,
 }: RangeSliderProps) => {
   const defaultStyle = {
     width: '100%',
@@ -55,6 +52,12 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
   if (Platform.OS === 'android') {
     return (
       <Slider
+        minDistance={minDistance}
+        hideLabels={hideLabels}
+        selectedMaximum={selectedMaximum}
+        selectedMinimum={selectedMinimum}
+        handleDiameter={handleDiameter}
+        disableRange={type === 'slider'}
         min={Number(min)}
         max={Number(max)}
         step={Number(step)}
@@ -64,13 +67,10 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
         onChange={handleChange}
         leftHandleColor={leftHandleColor}
         rightHandleColor={rightHandleColor}
-        minStartValue={minStartValue}
-        maxStartValue={maxStartValue}
         fixGap={fixGap}
         leftHandlePressedColor={leftHandlePressedColor}
         rightHandlePressedColor={rightHandlePressedColor}
         handlePressedColor={handlePressedColor || handleColor}
-        cornerRadius={cornerRadius}
         prefix={prefix}
         suffix={suffix}
         style={[defaultStyle, style]}

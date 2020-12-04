@@ -9,8 +9,9 @@ import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.UIManagerModule
 import java.lang.StringBuilder
+import android.view.View
 
-class RNRangeSliderView(context: Context): LinearLayout(context), OnRangeSeekbarChangeListener {
+class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekbarChangeListener {
   private var rangeSeekBar: CrystalRangeSeekbar
   private var minTextView: TextView?
   private var maxTextView: TextView?
@@ -28,6 +29,13 @@ class RNRangeSliderView(context: Context): LinearLayout(context), OnRangeSeekbar
     set(value) {
       field = value
       updateText()
+    }
+
+  var hideLabels: Boolean? = false
+    set(value) {
+      field = value
+      minTextView?.visibility = View.GONE
+      maxTextView?.visibility = View.GONE
     }
 
   init {
@@ -76,10 +84,6 @@ class RNRangeSliderView(context: Context): LinearLayout(context), OnRangeSeekbar
     rangeSeekBar.setRightThumbHighlightColor(Color.parseColor(color))
   }
 
-  fun setCornerRadius(diameter: Float) {
-    rangeSeekBar.setCornerRadius(diameter / 2)
-  }
-
   fun setMinValue(min: Float) {
     minValue = min
     rangeSeekBar.setMinValue(min)
@@ -92,6 +96,15 @@ class RNRangeSliderView(context: Context): LinearLayout(context), OnRangeSeekbar
     updateText(minValue, maxValue)
   }
 
+  fun setFixGap(gap: Float) {
+    rangeSeekBar.setFixGap(gap)
+  }
+
+  fun setStep(steps: Float) {
+    rangeSeekBar.setSteps(steps)
+  }
+
+  // started here
   fun setMinStartValue(minStartValue: Float) {
     rangeSeekBar.setMinStartValue(minStartValue)
   }
@@ -100,12 +113,13 @@ class RNRangeSliderView(context: Context): LinearLayout(context), OnRangeSeekbar
     rangeSeekBar.setMaxStartValue(maxStartValue)
   }
 
-  fun setFixGap(gap: Float) {
-    rangeSeekBar.setFixGap(gap)
+  fun setCornerRadius(diameter: Float) {
+    rangeSeekBar.setCornerRadius(diameter / 2)
   }
 
-  fun setStep(steps: Float) {
-    rangeSeekBar.setSteps(steps)
+  fun setGap[(gap: Float)
+  {
+    rangeSeekBar.setGap(gap);
   }
 
   private fun updateText(min: Number? = null, max: Number? = null) {

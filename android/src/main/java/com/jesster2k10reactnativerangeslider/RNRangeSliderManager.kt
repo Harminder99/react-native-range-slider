@@ -6,7 +6,7 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 
-class RNRangeSliderManager: SimpleViewManager<RNRangeSliderView>() {
+class RNRangeSliderManager : SimpleViewManager<RNRangeSliderView>() {
   override fun getName(): String {
     return "RNRangeSlider"
   }
@@ -69,12 +69,6 @@ class RNRangeSliderManager: SimpleViewManager<RNRangeSliderView>() {
     view.run { setRightHandleColor(color) }
   }
 
-  @ReactProp(name = "handleDiameter")
-  fun setCornerRadius(view: RNRangeSliderView, radius: Int?) {
-    if (radius == null) return
-    view.run { setCornerRadius(radius.toFloat()) }
-  }
-
   @ReactProp(name = "min")
   fun setMin(view: RNRangeSliderView, min: Int?) {
     if (min == null) return
@@ -85,18 +79,6 @@ class RNRangeSliderManager: SimpleViewManager<RNRangeSliderView>() {
   fun setMax(view: RNRangeSliderView, max: Int?) {
     if (max == null) return
     view.run { setMaxValue(max.toFloat()) }
-  }
-
-  @ReactProp(name = "minStart")
-  fun setMinStart(view: RNRangeSliderView, min: Int?) {
-    if (min == null) return
-    view.run { setMinStartValue(min.toFloat()) }
-  }
-
-  @ReactProp(name = "maxStart")
-  fun maxStart(view: RNRangeSliderView, max: Int?) {
-    if (max == null) return
-    view.run { setMaxStartValue(max.toFloat()) }
   }
 
   @ReactProp(name = "fixGap")
@@ -118,11 +100,41 @@ class RNRangeSliderManager: SimpleViewManager<RNRangeSliderView>() {
     view.prefix = prefix
   }
 
+  @ReactProp(name = "selectedMinimum")
+  fun setMinStart(view: RNRangeSliderView, min: Int?) {
+    if (min == null) return
+    view.run { setMinStartValue(min.toFloat()) }
+  }
+
+  @ReactProp(name = "selectedMaximum")
+  fun maxStart(view: RNRangeSliderView, max: Int?) {
+    if (max == null) return
+    view.run { setMaxStartValue(max.toFloat()) }
+  }
+
+  @ReactProp(name = "handleDiameter")
+  fun setCornerRadius(view: RNRangeSliderView, radius: Int?) {
+    if (radius == null) return
+    view.run { setCornerRadius(radius.toFloat()) }
+  }
+
+  @ReactProp(name = "minDistance")
+  fun setCornerRadius(view: RNRangeSliderView, min: Int?) {
+    if (radius == null) return
+    view.run { setGap(min.toFloat()) }
+  }
+
+  @ReactProp(name = "hideLabels")
+  fun setHideLabels(view: RNRangeSliderView, hideLabels: Boolean?) {
+    if (hideLabels == null) return
+    view.hideLabels = hideLabels
+  }
+
   override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
     return MapBuilder.of(
       RangeSliderChangeEvent.EVENT_NAME, MapBuilder.of(
       "registrationName", "onChange"
-      )
+    )
     )
   }
 }
