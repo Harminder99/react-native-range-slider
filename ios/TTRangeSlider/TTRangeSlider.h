@@ -156,6 +156,11 @@ IB_DESIGNABLE
 @property (nonatomic, assign) CGFloat handleDiameter;
 
 /**
+ *Handle diameter (default 0)
+ */
+@property (nonatomic, assign) CGFloat labelRotation;
+
+/**
  *Selected handle diameter multiplier (default 1.7)
  */
 @property (nonatomic, assign) CGFloat selectedHandleDiameterMultiplier;

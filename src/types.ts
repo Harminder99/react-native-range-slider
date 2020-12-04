@@ -24,6 +24,7 @@ export interface CommonRangeSliderProps {
   selectedMinimum?: number;
   selectedMaximum?: number;
   handleDiameter?: number;
+  labelRotation?: number;
 }
 
 export interface IOSOnlyRangeSliderProps {

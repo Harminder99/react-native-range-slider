@@ -688,6 +688,11 @@ static const CGFloat kLabelsFontSize = 12.0f;
 
 }
 
+-(void)setLabelRotation:(CGFloat)radians{
+    self.minLabel.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0);
+    self.maxLabel.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0);
+}
+
 -(void)setTintColorBetweenHandles:(UIColor *)tintColorBetweenHandles{
     _tintColorBetweenHandles = tintColorBetweenHandles;
     self.sliderLineBetweenHandles.backgroundColor = [tintColorBetweenHandles CGColor];

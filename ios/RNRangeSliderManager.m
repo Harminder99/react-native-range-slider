@@ -41,6 +41,7 @@ RCT_EXPORT_VIEW_PROPERTY(handleBorderColor, NSString);
 RCT_EXPORT_VIEW_PROPERTY(handleBorderWidth, float);
 RCT_EXPORT_VIEW_PROPERTY(handleColor, NSString);
 RCT_EXPORT_VIEW_PROPERTY(handleDiameter, float);
+RCT_EXPORT_VIEW_PROPERTY(labelRotation, float);
 RCT_EXPORT_VIEW_PROPERTY(minLabelColour, NSString);
 RCT_EXPORT_VIEW_PROPERTY(maxLabelColour, NSString);
 RCT_EXPORT_VIEW_PROPERTY(lineHeight, float);

@@ -27,6 +27,7 @@
 @property (nonatomic, assign) NSString* handleColor;
 @property (nonatomic, assign) NSString* handleBorderColor;
 @property (nonatomic, assign) float handleDiameter;
+@property (nonatomic, assign) float labelRotation;
 @property (nonatomic, assign) float handleBorderWidth;
 @property (nonatomic, assign) float lineHeight;
 @property (nonatomic, assign) float lineBorderWidth;

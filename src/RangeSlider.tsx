@@ -14,6 +14,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
   handleBorderColor,
   handleColor,
   handleDiameter,
+  labelRotation,
   handleBorderWidth,
   type = 'range',
   selectedMaximum,
@@ -57,6 +58,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
         selectedMaximum={selectedMaximum}
         selectedMinimum={selectedMinimum}
         handleDiameter={handleDiameter}
+        labelRotation={labelRotation}
         disableRange={type === 'slider'}
         min={Number(min)}
         max={Number(max)}
@@ -91,6 +93,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
         handleBorderWidth={handleBorderWidth}
         handleColor={handleColor}
         handleDiameter={handleDiameter}
+        labelRotation={labelRotation}
         minLabelColour={minLabelColor}
         minLabelFont={minLabelFont}
         minLabelFontSize={minLabelFontSize}
@@ -114,6 +117,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
 };
 
 RangeSlider.defaultProps = {
+  labelRotation: 0,
   min: 0,
   max: 100,
   step: 1,
