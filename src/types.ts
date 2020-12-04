@@ -21,8 +21,8 @@ export interface CommonRangeSliderProps {
   type?: 'slider' | 'range';
   minDistance?: number;
   hideLabels?: boolean;
-  selectedMinimum: number;
-  selectedMaximum: number;
+  selectedMinimum?: number;
+  selectedMaximum?: number;
   handleDiameter?: number;
 }
 
