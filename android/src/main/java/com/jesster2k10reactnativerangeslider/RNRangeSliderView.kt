@@ -117,8 +117,7 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
     rangeSeekBar.setCornerRadius(diameter / 2)
   }
 
-  fun setGap[(gap: Float)
-  {
+  fun setGap(gap: Float) {
     rangeSeekBar.setGap(gap);
   }
 

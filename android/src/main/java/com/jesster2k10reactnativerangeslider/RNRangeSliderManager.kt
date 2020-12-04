@@ -119,9 +119,9 @@ class RNRangeSliderManager : SimpleViewManager<RNRangeSliderView>() {
   }
 
   @ReactProp(name = "minDistance")
-  fun setCornerRadius(view: RNRangeSliderView, min: Int?) {
-    if (radius == null) return
-    view.run { setGap(min.toFloat()) }
+  fun setGap(view: RNRangeSliderView, gap: Int?) {
+    if (gap == null) return
+    view.run { setGap(gap.toFloat()) }
   }
 
   @ReactProp(name = "hideLabels")
