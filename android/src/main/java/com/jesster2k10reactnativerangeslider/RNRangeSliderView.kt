@@ -13,8 +13,8 @@ import android.view.View
 
 class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekbarChangeListener {
   private var rangeSeekBar: CrystalRangeSeekbar
-  private var minTextView: TextView?
-  private var maxTextView: TextView?
+  private var minTextView: TextView? = null
+  private var maxTextView: TextView? = null
 
   private var minValue: Float = 0f
   private var maxValue: Float = 100f
@@ -45,8 +45,8 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
     rangeSeekBar.setMinStartValue(minValue)
     rangeSeekBar.setMaxStartValue(maxValue)
 
-    minTextView = findViewById(R.id.range_seek_bar_min)
-    maxTextView = findViewById(R.id.range_seek_bar_max)
+    //minTextView = findViewById(R.id.range_seek_bar_min)
+    //maxTextView = findViewById(R.id.range_seek_bar_max)
     updateText(minValue, maxValue)
   }
 
@@ -106,11 +106,11 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
 
   // started here
   fun setMinStartValue(minStartValue: Float) {
-    rangeSeekBar.setMinStartValue(minStartValue)
+    rangeSeekBar.setMinStartValue(minStartValue).apply();
   }
 
   fun setMaxStartValue(maxStartValue: Float) {
-    rangeSeekBar.setMaxStartValue(maxStartValue)
+    rangeSeekBar.setMaxStartValue(maxStartValue).apply();
   }
 
   fun setCornerRadius(diameter: Float) {
