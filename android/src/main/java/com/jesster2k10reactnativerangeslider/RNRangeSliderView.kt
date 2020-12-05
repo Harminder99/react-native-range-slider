@@ -180,7 +180,7 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
         if (max == null || min == null) return
         updateText(min, max)
 
-        val event = RangeSliderChangeEvent(rangeSeekBar.id)
+        val event = RangeSliderChangeEvent(this.id)
         event.max = max.toDouble()
         event.min = min.toDouble()
 
