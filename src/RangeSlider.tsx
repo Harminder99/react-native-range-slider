@@ -47,7 +47,7 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
     height: 70,
   };
   const handleChange = ({ nativeEvent }: RangeSliderChangeEvent) => {
-    onChange && onChange(nativeEvent.min, nativeEvent.max);
+    onChange && onChange(nativeEvent.min, nativeEvent.max, nativeEvent.fromUser || false);
   };
 
   if (Platform.OS === 'android') {

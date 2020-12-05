@@ -10,7 +10,7 @@ export type RangeSliderChangeEvent = NativeSyntheticEvent<{
 export interface CommonRangeSliderProps {
   min: number;
   max: number;
-  onChange?: (min: number, max: number) => void;
+  onChange?: (min: number, max: number, fromUser: boolean) => void;
   tintColor?: string;
   tintColorBetweenHandles?: string;
   step?: number;
