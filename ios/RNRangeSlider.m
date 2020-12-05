@@ -172,7 +172,7 @@
     }
 }
 - (void)setStep:(float)step {
-    [_rangeSlider enableStep];
+    [_rangeSlider setEnableStep:true];
     [_rangeSlider setStep:step];
 }
 - (void)setMaxLabelFont:(NSString *)maxLabelFont {
