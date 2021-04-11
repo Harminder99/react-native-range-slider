@@ -40,6 +40,7 @@
 @property (nonatomic, assign) float step;
 @property (nonatomic, assign) float labelPadding;
 @property (nonatomic, assign) NSString* minLabelFont;
+@property (nonatomic, assign) NSString* addString;
 @property (nonatomic, assign) NSString* maxLabelFont;
 @property (nonatomic, assign) float minLabelFontSize;
 @property (nonatomic, assign) float maxLabelFontSize;

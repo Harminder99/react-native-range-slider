@@ -79,6 +79,10 @@
         [_rangeSlider setMaxValue: maxValue];
     }
 }
+
+- (void)setAddString:(NSString *)addString{
+    [_rangeSlider setAddString:addString];
+}
 - (void)setSelectedMinimum:(float)selectedMinimum{
     if(selectedMinimum != _selectedMinimum){
         _selectedMinimum = selectedMinimum;

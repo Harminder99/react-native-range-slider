@@ -275,8 +275,10 @@ static const CGFloat kLabelsFontSize = 12.0f;
 
     NSNumberFormatter *formatter = (self.numberFormatterOverride != nil) ? self.numberFormatterOverride : self.decimalNumberFormatter;
 
-    self.minLabel.string = [formatter stringFromNumber:@(self.selectedMinimum)];
-    self.maxLabel.string = [formatter stringFromNumber:@(self.selectedMaximum)];
+    self.minLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMinimum)],self.addString];
+    self.maxLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMaximum)], self.addString];
+//    self.minLabel.string = [formatter stringFromNumber:@(self.selectedMinimum)];
+//    self.maxLabel.string = [formatter stringFromNumber:@(self.selectedMaximum)];
     
     self.minLabelTextSize = [self.minLabel.string sizeWithAttributes:@{NSFontAttributeName:self.minLabelFont}];
     self.maxLabelTextSize = [self.maxLabel.string sizeWithAttributes:@{NSFontAttributeName:self.maxLabelFont}];

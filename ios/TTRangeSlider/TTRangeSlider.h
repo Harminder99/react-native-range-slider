@@ -165,6 +165,7 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) CGFloat selectedHandleDiameterMultiplier;
 
+@property (nonatomic, assign) NSString* addString;
 /**
  *Set slider line tint color between handles
  */

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95EC2AF42428D2E7000D842C /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EC2AF22428D2E6000D842C /* RangeSlider.m */; };
+		04A3F89E26230EB600CA3BBA /* RNRangeSliderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3F89826230EB600CA3BBA /* RNRangeSliderManager.m */; };
+		04A3F89F26230EB600CA3BBA /* RNRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3F89A26230EB600CA3BBA /* RNRangeSlider.m */; };
+		04A3F8A026230EB600CA3BBA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3F89D26230EB600CA3BBA /* UIColor+Hex.m */; };
 		95EC2AF92428D2ED000D842C /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EC2AF72428D2ED000D842C /* TTRangeSlider.m */; };
-		B3E7B58A1CC2AC0600A0062D /* ReactNativeRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* ReactNativeRangeSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,14 +26,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04A3F89826230EB600CA3BBA /* RNRangeSliderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRangeSliderManager.m; sourceTree = "<group>"; };
+		04A3F89926230EB600CA3BBA /* RNRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRangeSlider.h; sourceTree = "<group>"; };
+		04A3F89A26230EB600CA3BBA /* RNRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRangeSlider.m; sourceTree = "<group>"; };
+		04A3F89B26230EB600CA3BBA /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		04A3F89C26230EB600CA3BBA /* RNRangeSliderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRangeSliderManager.h; sourceTree = "<group>"; };
+		04A3F89D26230EB600CA3BBA /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libReactNativeRangeSlider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeRangeSlider.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		95EC2AF22428D2E6000D842C /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
-		95EC2AF32428D2E6000D842C /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
 		95EC2AF62428D2ED000D842C /* TTrangeSliderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTrangeSliderDelegate.h; sourceTree = "<group>"; };
 		95EC2AF72428D2ED000D842C /* TTRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRangeSlider.m; sourceTree = "<group>"; };
 		95EC2AF82428D2ED000D842C /* TTRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSlider.h; sourceTree = "<group>"; };
-		B3E7B5881CC2AC0600A0062D /* ReactNativeRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeRangeSlider.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* ReactNativeRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeRangeSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				95EC2AF52428D2ED000D842C /* TTRangeSlider */,
-				95EC2AF32428D2E6000D842C /* RangeSlider.h */,
-				95EC2AF22428D2E6000D842C /* RangeSlider.m */,
-				B3E7B5881CC2AC0600A0062D /* ReactNativeRangeSlider.h */,
-				B3E7B5891CC2AC0600A0062D /* ReactNativeRangeSlider.m */,
+				04A3F89926230EB600CA3BBA /* RNRangeSlider.h */,
+				04A3F89A26230EB600CA3BBA /* RNRangeSlider.m */,
+				04A3F89C26230EB600CA3BBA /* RNRangeSliderManager.h */,
+				04A3F89826230EB600CA3BBA /* RNRangeSliderManager.m */,
+				04A3F89B26230EB600CA3BBA /* UIColor+Hex.h */,
+				04A3F89D26230EB600CA3BBA /* UIColor+Hex.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95EC2AF42428D2E7000D842C /* RangeSlider.m in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* ReactNativeRangeSlider.m in Sources */,
+				04A3F89E26230EB600CA3BBA /* RNRangeSliderManager.m in Sources */,
+				04A3F8A026230EB600CA3BBA /* UIColor+Hex.m in Sources */,
+				04A3F89F26230EB600CA3BBA /* RNRangeSlider.m in Sources */,
 				95EC2AF92428D2ED000D842C /* TTRangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
