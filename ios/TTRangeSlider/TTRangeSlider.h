@@ -46,7 +46,7 @@ IB_DESIGNABLE
 /**
  * Hides the labels above the slider controls. YES = labels will be hidden. NO = labels will be shown. Default is NO.
  */
-@property (nonatomic, assign) IBInspectable BOOL hideLabels;
+@property (nonatomic, assign) NSString *hideLabels;
 
 /**
  * The color of the minimum value text label. If not set, the default is the tintColor.

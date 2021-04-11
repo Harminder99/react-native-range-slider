@@ -61,7 +61,7 @@ static const CGFloat kLabelsFontSize = 12.0f;
     _enableStep = NO;
     _step = 0.1f;
 
-    _hideLabels = NO;
+    _hideLabels = @"";
     
     _handleDiameter = 16.0;
     
@@ -267,7 +267,7 @@ static const CGFloat kLabelsFontSize = 12.0f;
 }
 
 - (void)updateLabelValues {
-    if (self.hideLabels || [self.numberFormatterOverride isEqual:[NSNull null]]){
+    if ([self.numberFormatterOverride isEqual:[NSNull null]]){
         self.minLabel.string = @"";
         self.maxLabel.string = @"";
         return;
@@ -275,8 +275,8 @@ static const CGFloat kLabelsFontSize = 12.0f;
 
     NSNumberFormatter *formatter = (self.numberFormatterOverride != nil) ? self.numberFormatterOverride : self.decimalNumberFormatter;
 
-    self.minLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMinimum)],self.addString];
-    self.maxLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMaximum)], self.addString];
+    self.minLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMinimum)],self.hideLabels];
+    self.maxLabel.string = [NSString stringWithFormat: @"%@ %@", [formatter stringFromNumber:@(self.selectedMaximum)], self.hideLabels];
 //    self.minLabel.string = [formatter stringFromNumber:@(self.selectedMinimum)];
 //    self.maxLabel.string = [formatter stringFromNumber:@(self.selectedMaximum)];
     

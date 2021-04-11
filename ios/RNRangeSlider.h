@@ -35,7 +35,7 @@
 @property (nonatomic, assign) NSString* suffix;
 @property (nonatomic, assign) NSString* prefix;
 @property (nonatomic, assign) BOOL disableRange;
-@property (nonatomic, assign) BOOL hideLabels;
+@property (nonatomic, assign) NSString* hideLabels;
 
 @property (nonatomic, assign) float step;
 @property (nonatomic, assign) float labelPadding;

@@ -170,10 +170,11 @@
 - (void)setDisableRange:(BOOL)disableRange{
     [_rangeSlider setDisableRange:disableRange];
 }
-- (void)setHideLabels:(BOOL)hideLabels{
-    if(hideLabels){
-        [_rangeSlider setHideLabels: YES];
-    }
+- (void)setHideLabels:(NSString *)hideLabels{
+    [_rangeSlider setHideLabels: hideLabels];
+//    if(hideLabels){
+//
+//    }
 }
 - (void)setStep:(float)step {
     [_rangeSlider setEnableStep:true];
