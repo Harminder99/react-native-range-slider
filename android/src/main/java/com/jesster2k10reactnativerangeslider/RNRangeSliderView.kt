@@ -33,12 +33,12 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
             updateText()
         }
 
-    var hideLabels: Boolean? = false
-        set(value) {
-            field = value
-            minTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
-            maxTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
-        }
+    var hideLabels: String? = ""
+//        set(value) {
+//            field = value
+//            minTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
+//            maxTextView?.visibility = if (value ?: false) View.GONE else View.VISIBLE
+//        }
 
     var disableRange: Boolean? = false
         set(value) {
@@ -158,11 +158,11 @@ class RNRangeSliderView(context: Context) : LinearLayout(context), OnRangeSeekba
         var minText = minTextView?.text
         var maxText = minTextView?.text
         if (min !== null) {
-            minText = min.toString()
+            minText = min.toString() + hideLabels
         }
 
         if (max !== null) {
-            maxText = max.toString()
+            maxText = max.toString() + hideLabels
         }
 
         minTextView?.text = StringBuilder()

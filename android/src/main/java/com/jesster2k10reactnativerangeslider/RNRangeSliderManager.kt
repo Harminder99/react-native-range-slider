@@ -125,7 +125,7 @@ class RNRangeSliderManager : SimpleViewManager<RNRangeSliderView>() {
     }
 
     @ReactProp(name = "hideLabels")
-    fun setHideLabels(view: RNRangeSliderView, hideLabels: Boolean?) {
+    fun setHideLabels(view: RNRangeSliderView, hideLabels: String?) {
         if (hideLabels == null) return
         view.hideLabels = hideLabels
     }
